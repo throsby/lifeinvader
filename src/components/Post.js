@@ -6,7 +6,7 @@ const Post = ({ post }) => {
     return(
         <div>
             <img src={post.image} height="250" width="250"/>
-            <p>Post by {post.username} • {likes} likes</p>
+            <p>Post by {post.username} • {likes} potatoes</p>
             <button onClick={()=>{
                 setLikes(likes+1)
             }}>🥔</button>
