@@ -9,7 +9,7 @@ const Post = ({ post }) => {
             <p>Post by {post.username} • {likes} likes</p>
             <button onClick={()=>{
                 setLikes(likes+1)
-            }}>🥔 </button>
+            }}>🥔</button>
             <p>{post.content}</p>
         </div>
     )

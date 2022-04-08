@@ -3,6 +3,7 @@ import Post from "./Post"
 
 const Timeline = () => {
     const [posts, setPosts] = useState([])
+    const [newPostModalVisible, setNewPostModalVisible] = useState(false)
     
     useEffect(()=>{
         // console.log("rendering timeline")
@@ -16,7 +17,13 @@ const Timeline = () => {
     
     return (
         <div>
-            <h1>Timeline</h1>
+            <h2>Timeline</h2>
+            <button onClick={()=>{setNewPostModalVisible(!newPostModalVisible)}}>+ New Post</button>
+            <div className={newPostModalVisible ? "create-post-modal" : "create-post-modal-hidden"}>
+                <h3>Create Post</h3>
+                <textarea rows="5" cols="30"></textarea>
+                <button type="submit">Create Post</button>
+            </div>
             {
                 posts.map((post) => {
                     return(
