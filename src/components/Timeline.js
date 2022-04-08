@@ -20,7 +20,7 @@ const Timeline = () => {
             {
                 posts.map((post) => {
                     return(
-                        <Post post={post}/>
+                        <Post key={post.id} post={post}/>
                     )
                 }
                 )
